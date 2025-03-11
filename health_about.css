@@ -1,0 +1,260 @@
+/* Basic CSS for the navigation bar */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color:lightslategrey;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  nav ul {
+    list-style-type: none;
+    /* padding: 0; */
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Basic CSS for the form elements */
+  body {
+    font-family: Arial, sans-serif;
+    /* margin: 20px; */
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    position: relative;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+  }
+  h2 {
+    margin-bottom: 20px;
+    position: absolute;
+    left: 150px;
+    top:200px;
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 200px;
+    padding: 5px;
+
+  }
+  
+  button {
+    padding: 7px 15px;
+    background-color:darkslategray;
+    color: white;
+    width: 100px;
+    height: 50px;
+    font-size: large;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Basic CSS for the report section */
+  h2 {
+    margin-top: 30px;
+  }
+  
+  #report,#result {
+    padding: 10px;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+#result{
+  height: 400px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+  #result img{
+    width: 200px;
+    height: 100px;
+  }
+  #home{
+position: absolute;
+left: 600px ;
+top: 50px;
+font-size: large;
+  }
+  #About_Us{
+    position: absolute;
+    left: 690px;
+    top: 50px;
+    font-size: large;
+  }
+  #contact{
+    position: absolute;
+    left: 800px;
+    top: 50px;
+    font-size: large;
+  }
+  #intro{
+    margin-bottom: 20px;
+    position: absolute;
+    left: 150px;
+    top:450px;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight:normal;
+    color: white;
+  }
+  #team{
+    margin-bottom: 20px;
+    position: absolute;
+    left: 100px;
+    top:720px;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bolder;
+    font-weight:normal;
+    color: white;
+  }
+  #p1{
+    margin-bottom: 20px;
+    position: absolute;
+    left: 400px;
+    top:700px;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight:normal;
+    color: white;
+    background-color: cadetblue;
+    border-style: groove;
+    border-radius: 10px;
+    border-color: cadetblue;
+    padding: 10px;
+    
+
+  }
+  #p2{
+    margin-bottom: 20px;
+    position: absolute;
+    left: 800px;
+    top:700px;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight:normal;
+    color: white;
+    background-color: cadetblue;
+    border-style: groove;
+    border-radius: 10px;
+    border-color: cadetblue;
+    padding: 10px;
+    
+  }
+  #p3{
+    margin-bottom: 20px;
+    position: absolute;
+    left: 1300px;
+    top:700px;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight:normal;
+    color: white;
+    background-color: cadetblue;
+    border-style: groove;
+    border-radius: 10px;
+    border-color: cadetblue;
+    padding: 10px;
+    
+  }
+  #Yimg{
+position: absolute;
+left: 20px;
+  top: 450px;
+width: 40px ;
+height:40px ;
+  }
+  #Yimg:hover{
+    cursor:pointer;
+  }
+  #Iimg{
+    position: absolute;
+    left: 20px;
+    top: 520px;
+    width: 40px ;
+    height:40px ;
+  }
+  #Iimg:hover{
+    cursor:pointer;
+  }
+  #Timg{
+    position: absolute;
+    left: 20px;
+    top: 590px;
+    width: 40px ;
+    height:40px ;
+  }
+  #Timg:hover{
+    cursor:pointer;
+  }
+  #Fimg{
+    position: absolute;
+    left: 20px;
+    top: 660px;
+    width: 40px ;
+    height:40px ;
+  }
+  #Fimg:hover{
+    cursor:pointer;
+  } 
+ 
+  
+  #conditionInput{
+width:250px ;
+height:50px ;
+background:linear-gradient(to right,lightblue,azure);
+  }
+  .container{
+    height: 1000px;
+    width: 2000px;
+background-image: url("./images/island-beach.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+  }
+
+  
+
+  
