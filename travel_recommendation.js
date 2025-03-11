@@ -1,6 +1,7 @@
 const addPatientButton = document.getElementById("addPatient");
 const report = document.getElementById("report");
 const btnSearch = document.getElementById('btnSearch');
+const btnClear = document.getElementById('btnClear');
 const patients = [];
 
 function addPatient() {
@@ -30,12 +31,18 @@ function addPatient() {
 }
    
   function resetForm() {
-    document.getElementById("name").value = "";
-    document.querySelector('input[name="gender"]:checked').checked = false;
-    document.getElementById("age").value = "";
-    document.getElementById("country").value = "";
-  }
-
+  
+document.getElementById("country_name").remove();
+document.getElementById("city_img").remove();
+document.getElementById("city_name").remove();
+document.getElementById("city_dis").remove();
+document.getElementById("city_img2").remove();
+document.getElementById("city_name2").remove();
+document.getElementById("city_dis2").remove();
+document.getElementById("country_name2").remove();
+document.getElementById("country_img2").remove();
+document.getElementById("city_dis2").remove();
+}
   function searchcountry() {
     const inputs = document.getElementById('countryInput').value.toLowerCase();
     const input = pluralToSingular(inputs);
@@ -68,45 +75,5 @@ function addPatient() {
       });
   }
     btnSearch.addEventListener('click', searchcountry);
+    btnClear.addEventListener('click', resetForm);
 
-  function generateReport() {
-    const numPatients = patients.length;
-    const countrysCount = {
-      Diabetes: 0,
-      Thyroid: 0,
-      "High Blood Pressure": 0,
-    };
-    const gendercountrysCount = {
-      Male: {
-        Diabetes: 0,
-        Thyroid: 0,
-        "High Blood Pressure": 0,
-      },
-      Female: {
-        Diabetes: 0,
-        Thyroid: 0,
-        "High Blood Pressure": 0,
-      },
-    };
-
-    for (const patient of patients) {
-      countrysCount[patient.country]++;
-      gendercountrysCount[patient.gender][patient.country]++;
-    }
-
-    report.innerHTML = `Number of patients: ${numPatients}<br><br>`;
-    report.innerHTML += `countrys Breakdown:<br>`;
-    for (const country in countrysCount) {
-      report.innerHTML += `${country}: ${countrysCount[country]}<br>`;
-    }
-
-    report.innerHTML += `<br>Gender-Based countrys:<br>`;
-    for (const gender in gendercountrysCount) {
-      report.innerHTML += `${gender}:<br>`;
-      for (const country in gendercountrysCount[gender]) {
-        report.innerHTML += `&nbsp;&nbsp;${country}: ${gendercountrysCount[gender][country]}<br>`;
-      }
-    }
-  }
-
-addPatientButton.addEventListener("click", addPatient);
