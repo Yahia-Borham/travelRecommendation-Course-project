@@ -39,9 +39,7 @@ document.getElementById("city_dis").remove();
 document.getElementById("city_img2").remove();
 document.getElementById("city_name2").remove();
 document.getElementById("city_dis2").remove();
-document.getElementById("country_name2").remove();
-document.getElementById("country_img2").remove();
-document.getElementById("city_dis2").remove();
+
 }
   function searchcountry() {
     const inputs = document.getElementById('countryInput').value.toLowerCase();
@@ -53,6 +51,7 @@ document.getElementById("city_dis2").remove();
       .then(data => {
         const country = data.countries.find(item => item.name.toLowerCase() === input);
         const temple = data.temples.find(item => item.name.toLowerCase() === input);
+        const beach = data.beaches.find(item => item.name.toLowerCase() === input);
         if (country) {
           resultDiv.innerHTML += `<h2 id = "country_name">${country.name}</h2>`;
           resultDiv.innerHTML += `<img id = "city_img"  src="${country.cities[0].imageUrl}" />`;
@@ -62,10 +61,15 @@ document.getElementById("city_dis2").remove();
           resultDiv.innerHTML += `<p id = "city_name2"> ${country.cities[1].name}</p>`;
           resultDiv.innerHTML += `<p id = "city_dis2">${country.cities[1].description}</p>`;
         } else if(temple){
-          resultDiv.innerHTML += `<h2 id = "country_name2">${temple.name}</h2>`;
-          resultDiv.innerHTML += `<img id = "country_img2"  src="${temple.imageUrl}" />`;
-          resultDiv.innerHTML += `<p id = "city_dis2">${temple.description}</p>`;
-        } else {
+          resultDiv.innerHTML += `<h2 id = "country_name">${temple.name}</h2>`;
+          resultDiv.innerHTML += `<img id = "city_img"  src="${temple.imageUrl}" />`;
+          resultDiv.innerHTML += `<p id = "city_dis">${temple.description}</p>`;
+        } else if(beach){
+          resultDiv.innerHTML += `<h2 id = "country_name">${beach.name}</h2>`;
+          resultDiv.innerHTML += `<img id = "city_img"  src="${beach.imageUrl}" />`;
+          resultDiv.innerHTML += `<p id = "city_dis">${beach.description}</p>`;
+        }
+         else {
           resultDiv.innerHTML = 'country not found.';
         }
       })
